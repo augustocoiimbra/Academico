@@ -1,0 +1,9 @@
+@model Academico.Models.Instituicao
+@{ ViewData["Title"] = "Detalhes"; }
+<h2>Detalhes da Instituição</h2>
+<dl class="row">
+    <dt class="col-sm-3">Nome</dt><dd class="col-sm-9">@Model.Nome</dd>
+    <dt class="col-sm-3">Endereço</dt><dd class="col-sm-9">@Model.Endereco</dd>
+</dl>
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Editar</a>
+<a asp-action="Index" class="btn btn-secondary">Voltar</a>

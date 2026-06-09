@@ -1,0 +1,21 @@
+@model IEnumerable<Academico.Models.Instituicao>
+@{ ViewData["Title"] = "Instituições"; }
+<h2>Instituições</h2>
+<p><a asp-action="Create" class="btn btn-primary">Nova Instituição</a></p>
+<table class="table table-striped">
+    <thead><tr><th>Nome</th><th>Endereço</th><th></th></tr></thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Nome</td>
+                <td>@item.Endereco</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

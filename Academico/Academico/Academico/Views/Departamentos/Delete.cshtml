@@ -1,0 +1,9 @@
+@model Academico.Models.Departamento
+@{ ViewData["Title"] = "Excluir Departamento"; }
+<h2>Confirmar Exclusão</h2>
+<p>Tem certeza que deseja excluir o departamento <strong>@Model.Nome</strong>?</p>
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Confirmar Exclusão</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>
